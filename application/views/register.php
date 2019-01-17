@@ -30,34 +30,29 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?php echo base_url()?>"><b>Admin</b>data</a>
+    <a href="<?php echo base_url()?>"><b>Buat</b>AdminPPM</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-  <?php
-  ?>
-    <p class="login-box-msg">Silahakan login sebagai admin</p>
-
-    
-    <form action="<?php echo base_url('index.php/login/aksi_login')?>" method="post">
+    <p class="login-box-msg">Silahakan buat admin baru</p>
+    <form action="<?php echo base_url('index.php/login/add_register')?>" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="username" name="username" required="">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password" required="">
+        <input type="password" class="form-control" placeholder="password" name="password" required="">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign it</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
-    <a href="<?php echo base_url();?>index.php/login/register" class="text-center">Buat data admin baru</a>
+    <a href="<?php echo base_url('index.php/login')?>" class="text-center">sudah punya akun</a>
   </div>
   <!-- /.login-box-body -->
 </div>

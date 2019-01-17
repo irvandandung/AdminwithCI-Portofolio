@@ -32,6 +32,7 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
+ 
 <div class="wrapper">
 
   <header class="main-header">
@@ -59,14 +60,14 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Muhamad Irvan Dandung</span>
+              <span class="hidden-xs"><?php echo $this->session->userdata("nama");?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 <p>
-                  Muhamad Irvan Dandung - Web Developer
+                  <?php echo $this->session->userdata("nama");?>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -90,7 +91,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url()?>index.php/login/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -113,7 +114,7 @@
           <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Muhamad Irvan Dandung</p>
+          <p><?php echo $this->session->userdata("nama");?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -182,11 +183,11 @@
 							</div>
 							<div class="form-group">
 								<label for="input">Jumlah barang:</label>
-								<input class="form-control" type="text" name="jumlahbarang" id="jumlahbarang" placeholder="Maukan jumlah barang" required="">
+								<input class="form-control" type="number" name="jumlahbarang" id="jumlahbarang" placeholder="Maukan jumlah barang" required="">
 							</div>
 							<div class="form-group">
 								<label for="radio">Harga barang: (Rp.)</label>
-								<input class="form-control" type="text" name="hargabarang" id="hargabarang" placeholder="Maukan harga barang" required="">
+								<input class="form-control" type="number" name="hargabarang" id="hargabarang" placeholder="Maukan harga barang" required="">
 							</div>
 							<div class="form-group">
 							<button type="submit" class="btn btn-default">Kirim</button>
